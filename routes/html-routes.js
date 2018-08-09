@@ -1,26 +1,29 @@
 var path = require("path");
 
-module.exports = function(app) {
-    //home page
-    app.get("/", function(req, res) {
-      res.render(path.join(__dirname, "../views/index.handlebars"));
+module.exports = function (app) {
+  //home page
+  app.get("/", function (req, res) {
+    res.render(path.join(__dirname, "../views/index"));
+  });
+
+  app.get("/home", function(req, res) {
+      res.render(path.join(__dirname, "../views/index"));
     });
 
-    // app.get("/home", function(req, res) {
-    //     res.render(path.join(__dirname, "../views/index.handlebars"));
-    //   });
+  //post a color
+  app.get("/create-a-color-form", function (req, res) {
+    res.render(path.join(__dirname, "../views/postColors"));
+  });
 
-    //post a color
-    app.get("/create-a-color-form", function(req, res) {
-        res.render(path.join(__dirname, "../views/postColors"));
-      });
+  //colors page
+  app.get("/allColors", function(req, res) {
+      res.render(path.join(__dirname, "../views/colors"));
+    });
 
-    // app.get("/allColors", function(req, res) {
-    //     res.render(path.join(__dirname, "../views/guests"));
-    //   });
+  //error
+  app.get("/*", function (req, res) {
+    res.render(path.join(__dirname, "../views/404"));
+  });
 
-    //error
-    app.get("/*", function(req, res) {
-        res.render(path.join(__dirname, "../views/404.handlebars"));
-      });
-    };
+
+};
