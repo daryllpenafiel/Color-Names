@@ -1,0 +1,22 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "colors_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 5000
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "colors_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "colorsdb",
+    "dialect": "mysql"
+  }
+}
