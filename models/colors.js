@@ -23,9 +23,12 @@ module.exports = function (sequelize, DataTypes)
         colorSource: {
             type: DataTypes.STRING,
             defaultValue:"user"
+        },
+        likes: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0
         }
     });
-
 
     return colors;
 };
