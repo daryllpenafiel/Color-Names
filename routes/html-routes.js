@@ -6,9 +6,9 @@ module.exports = function(app) {
       res.render(path.join(__dirname, "../views/index.handlebars"));
     });
 
-    app.get("/home", function(req, res) {
-        res.render(path.join(__dirname, "../views/index.handlebars"));
-      });
+    // app.get("/home", function(req, res) {
+    //     res.render(path.join(__dirname, "../views/index.handlebars"));
+    //   });
 
     //post a color
     app.get("/create-a-color-form", function(req, res) {
