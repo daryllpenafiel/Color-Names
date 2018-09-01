@@ -66,4 +66,18 @@ p{
 	display: inline-block;
 }
 
+.dropdown-text {
+    color: darkslategray;
+}
 
+.dropdown-text:hover {
+    color: darkslategray;
+    cursor: pointer;
+}
+
+ul.dropdown-menu.show{
+    margin: auto;
+    text-align: left;
+    padding: 0px 20%;
+    opacity: 0.9;
+}

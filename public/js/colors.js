@@ -1,11 +1,40 @@
 $(document).ready(function(){
 
-  
+
+//Load all colors upon load
   function getColors() {
     $.get("/api/colors/html", function (colorData) {
 
+      $(".colors-go-here").empty();
+
       for (i = 0; i < colorData.length; i++) {
         var colorDiv = $("<div class='color-block col-md-6'>").css({"background-color": (colorData[i].rgb) ? colorData[i].rgb : colorData[i].hex});
+        colorDiv.addClass(colorData[i].colorName);
+        var colorP = $("<p>").text(colorData[i].colorName).css({"color": (colorData[i].colorFamily === "Yellow" || colorData[i].colorFamily === "White" || colorData[i].colorFamily === "Brown") ? "darkslategray" : "white"});
+        colorDiv.append(colorP);
+        $(".colors-go-here").append(colorDiv);
+    }
+    });
+  };
+
+  getColors();
+
+//--------------------------
+
+//Listener for color filters
+
+  $(document).on("click",".dropdown-text",function(){
+    var colorFamily = $(this).attr("data-value");
+    console.log(colorFamily);
+    filterColors(colorFamily);
+  })
+
+  function filterColors(colorFamily) {
+    $.get("/api/filter-by-color/" + colorFamily, function (colorData) {
+      $(".colors-go-here").empty();
+
+      for (i = 0; i < colorData.length; i++) {
+        var colorDiv = $("<div class='color-block col-md-6'>").css({"background-color": (colorData[i].rgb !== "RGB(,,)") ? colorData[i].rgb : colorData[i].hex});
         colorDiv.addClass(colorData[i].colorName);
         var colorP = $("<p>").text(colorData[i].colorName).css({"color": (colorData[i].colorFamily === "Yellow" || colorData[i].colorFamily === "White" || colorData[i].colorFamily === "Brown") ? "darkslategray" : "white"});
         colorDiv.append(colorP);
@@ -20,7 +49,7 @@ $(document).ready(function(){
     colorsLiust.append(alertDiv);
   }
   
-  getColors();
+
 
   ///------OLD FUNCTIONS FOR GENERATING A TABLE------------------------//
 
