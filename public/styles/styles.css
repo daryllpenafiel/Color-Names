@@ -1,6 +1,7 @@
 body {
     margin: auto;
     text-align: center;
+    line-height: 17px;
 }
 
 nav {
@@ -50,4 +51,19 @@ a {
     margin: auto;
     display: inline-block;
 }
+
+p{
+	font-weight: bold;
+	letter-spacing: 4px;
+	font-size: 25px;
+	text-transform: uppercase;
+	line-height: 300px;
+	color: white;
+}
+
+.color-block {
+	height: 300px;
+	display: inline-block;
+}
+
 
