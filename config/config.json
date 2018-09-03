@@ -2,7 +2,7 @@
   "development": {
     "username": "b33ed13b825a3c",
     "password": "ee9c464e",
-    "database": "colors_db",
+    "database": "heroku_e50111c16c756cd",
     "host": "us-cdbr-iron-east-01.cleardb.net",
     "dialect": "mysql",
     "port": 3006
