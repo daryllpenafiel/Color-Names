@@ -14,7 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "colors_db",
+    "use_env_variable": "heroku_e50111c16c756cd",
     "dialect": "mysql"
   }
 }
