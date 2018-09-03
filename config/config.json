@@ -11,8 +11,7 @@
     "password": "ee9c464e",
     "database": "heroku_e50111c16c756cd",
     "host": "us-cdbr-iron-east-01.cleardb.net",
-    "dialect": "mysql",
-    "logging": false
+    "dialect": "mysql"
   },
   "production": {
     "use_env_variable": "colors_db",
