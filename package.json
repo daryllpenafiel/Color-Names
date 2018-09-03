@@ -2,7 +2,7 @@
   "name": "color-names",
   "version": "1.0.0",
   "description": "",
-  "main": "future-code.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daryllpenafiel/Color-Names.git"
+    "url": "git+https://github.com/daryllpenafiel/color-names.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daryllpenafiel/Color-Names/issues"
+    "url": "https://github.com/daryllpenafiel/color-names/issues"
   },
-  "homepage": "https://github.com/daryllpenafiel/Color-Names#readme"
+  "homepage": "https://github.com/daryllpenafiel/color-names#readme"
 }
